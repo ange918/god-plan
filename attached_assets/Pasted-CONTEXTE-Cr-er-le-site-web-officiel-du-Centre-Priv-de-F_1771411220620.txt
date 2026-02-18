@@ -1,0 +1,307 @@
+CONTEXTE
+
+Créer le site web officiel du :
+
+Centre Privé de Formation Professionnelle GOD’S PLAN
+📍 Akpakpa St Martin
+📞 +229 01 90 83 54 62 / 01 62 62 56 18
+📧 Grafickexpressservices20188@gmail.com
+
+Slogan :
+
+Nous construisons votre avenir maintenant !
+
+Le site doit être :
+
+Moderne
+
+Professionnel
+
+Clair
+
+Accessible
+
+Orienté conversion (inscriptions)
+
+Responsive
+
+Simple à naviguer
+
+Budget limité → design efficace mais impactant.
+
+🏗 STACK TECHNIQUE
+
+Next.js 14 (App Router)
+
+TypeScript
+
+Tailwind CSS
+
+Formulaire fonctionnel (API route)
+
+Intégration WhatsApp
+
+Google Maps
+
+Hébergement optimisé HTTPS
+
+🎨 IDENTITÉ VISUELLE RECOMMANDÉE
+
+(À adapter si le centre possède déjà une charte)
+
+🎨 Palette professionnelle
+
+Bleu profond : #0F2C59 (confiance, sérieux)
+
+Jaune/or : #F4B400 (avenir, opportunité)
+
+Blanc : #FFFFFF
+
+Gris clair : #F5F5F5
+
+Noir texte : #1A1A1A
+
+⚠️ Design sobre, pas d’effets excessifs.
+
+✍️ Typographie
+
+Titres :
+
+Poppins / Montserrat (semi-bold)
+
+Texte :
+
+Inter / Open Sans
+
+CTA :
+
+Bold
+
+Lisible
+
+Contrasté
+
+🖥 ARBORESCENCE DÉTAILLÉE
+1️⃣ PAGE ACCUEIL
+Hero Section
+
+Titre :
+Centre Privé de Formation Professionnelle GOD’S PLAN
+
+Sous-titre :
+Nous construisons votre avenir maintenant !
+
+Texte court :
+Un centre dédié au développement des compétences pratiques et professionnelles pour une insertion rapide et durable dans le monde du travail.
+
+Boutons :
+
+S’inscrire maintenant
+
+Nous contacter (WhatsApp)
+
+Image :
+Photos réelles des formations
+
+Section Présentation
+
+Texte résumé :
+
+Le Centre Privé de Formation Professionnelle GOD’S PLAN est un établissement dédié au développement des compétences pratiques et professionnelles, visant l’insertion socio-professionnelle et l’autonomisation des apprenants.
+
+Mettre en avant :
+
+Encadrement qualifié
+
+Formation pratique
+
+Outils modernes
+
+Métiers d’avenir
+
+Section Formations phares (Cartes)
+
+Afficher 6 à 9 cartes :
+
+Graphisme – Sérigraphie
+
+Photographie & Design
+
+Audiovisuel
+
+Make-up & Onglerie
+
+Informatique
+
+Secrétariat bureautique
+
+Cuisine & Restauration
+
+Personnalisation gadgets
+
+Chaque carte :
+
+Image
+
+Durée
+
+Coût
+
+Bouton “Voir détails”
+
+Section Pourquoi choisir GOD’S PLAN ?
+
+Points clés :
+
+✔ Formations pratiques
+✔ Stage intégré
+✔ Encadrement professionnel
+✔ Diplôme reconnu
+✔ Accessible dès le CEP
+
+Section Call to Action
+
+Fond bleu profond.
+
+Texte :
+Inscrivez-vous dès aujourd’hui et construisez votre avenir avec nous.
+
+Bouton :
+Je m’inscris
+
+2️⃣ PAGE À PROPOS
+
+Contenu :
+
+Historique
+
+Mission
+
+Vision
+
+Valeurs :
+
+Excellence
+
+Discipline
+
+Créativité
+
+Responsabilité
+
+Section Équipe pédagogique (photos si disponibles)
+
+3️⃣ PAGE FORMATIONS
+
+Organiser par catégories :
+
+🎨 Domaine Numérique & Créatif
+
+Graphisme – Sérigraphie
+
+Design Graphique
+
+Photographie & Audiovisuel
+
+Initiation Informatique
+
+🍽 Cuisine & Restauration
+
+Pâtisserie
+
+Cuisine professionnelle
+
+💄 Beauté & Esthétique
+
+Make-up
+
+Onglerie
+
+Nouage de foulard
+
+Chaque formation doit afficher :
+
+Description complète
+
+Contenu
+
+Durée
+
+Coût
+
+Niveau requis : CEP minimum
+
+Débouchés
+
+Bouton “S’inscrire”
+
+4️⃣ PAGE INSCRIPTIONS
+
+Contenu :
+
+Conditions d’accès :
+CEP minimum
+
+Pièces à fournir :
+(à compléter si disponible)
+
+Calendrier :
+(à intégrer si fourni)
+
+Formulaire en ligne :
+
+Champs :
+
+Nom
+
+Prénom
+
+Téléphone
+
+Formation choisie
+
+Message
+
+Bouton WhatsApp direct :
+
+Lien dynamique vers :
+https://wa.me/2290190835462
+
+5️⃣ GALERIE
+
+Grid responsive :
+
+Photos ateliers
+
+Vidéos formations
+
+Événements
+
+Hover léger.
+
+6️⃣ NOS SERVICES
+
+Présenter :
+
+Sérigraphie
+
+Impression personnalisée
+
+Création graphique
+
+Couverture événementielle
+
+Personnalisation gadgets
+
+7️⃣ CONTACT
+
+Afficher :
+
+📍 Akpakpa St Martin
+📞 +229 01 90 83 54 62
+📞 01 62 62 56 18
+📧 Grafickexpressservices20188@gmail.com
+
+Google Maps intégré.
+
+Horaires (si disponibles).
