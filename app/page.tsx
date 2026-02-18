@@ -3,7 +3,8 @@ import Hero from '@/components/Hero';
 import Formations from '@/components/Formations';
 import Features from '@/components/Features';
 import Footer from '@/components/Footer';
-import { CONTACT_INFO } from '@/constants';
+import { CONTACT_INFO, SERVICES } from '@/constants';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -18,11 +19,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:flex items-center gap-12">
             <div className="lg:w-1/2 mb-10 lg:mb-0">
-              <h2 className="text-3xl font-bold text-[#0F2C59] mb-6 font-poppins">À Propos de GOD’S PLAN</h2>
+              <h2 className="text-3xl font-bold text-[#0F2C59] mb-6 font-poppins tracking-tight">À Propos de GOD’S PLAN</h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 Le Centre Privé de Formation Professionnelle GOD’S PLAN est un établissement dédié au développement des compétences pratiques et professionnelles, visant l’insertion socio-professionnelle et l’autonomisation des apprenants.
               </p>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 mb-8">
                 {['Encadrement qualifié', 'Formation pratique', 'Outils modernes', 'Métiers d’avenir'].map((item) => (
                   <div key={item} className="flex items-center gap-2">
                     <span className="text-[#F4B400] font-bold text-xl">✓</span>
@@ -30,8 +31,15 @@ export default function Home() {
                   </div>
                 ))}
               </div>
+              <Link 
+                href="/a-propos" 
+                className="inline-flex items-center text-[#0F2C59] font-bold hover:text-[#F4B400] transition-colors group"
+              >
+                En savoir plus sur notre mission
+                <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
             </div>
-            <div className="lg:w-1/2 bg-gray-200 h-96 rounded-3xl flex items-center justify-center text-gray-400 border-4 border-white shadow-xl overflow-hidden relative group">
+            <div className="lg:w-1/2 bg-gray-200 h-96 rounded-3xl flex items-center justify-center text-[#0F2C59]/20 font-bold uppercase tracking-widest italic border-4 border-white shadow-xl overflow-hidden relative group">
                <div className="absolute inset-0 bg-[#0F2C59]/10 group-hover:bg-transparent transition-colors"></div>
                <span className="relative z-10 font-bold uppercase tracking-widest text-[#0F2C59]/40 text-xl">Photo du Centre</span>
             </div>
@@ -41,26 +49,49 @@ export default function Home() {
 
       <Formations />
 
-      {/* CTA Section */}
-      <section className="py-20 bg-[#0F2C59] relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-[#F4B400]/10 rounded-full -mr-32 -mt-32"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#F4B400]/10 rounded-full -ml-32 -mb-32"></div>
-        <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-8 font-poppins">Inscrivez-vous dès aujourd’hui et construisez votre avenir avec nous.</h2>
-          <button className="bg-[#F4B400] text-[#0F2C59] px-12 py-5 rounded-xl font-bold text-xl hover:bg-white hover:scale-105 transition-all shadow-lg">
-            Je m’inscris
-          </button>
+      {/* Services Preview */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-[#0F2C59] mb-4 font-poppins">Nos Services Professionnels</h2>
+            <div className="w-20 h-1 bg-[#F4B400] mx-auto"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {SERVICES.slice(0, 4).map((service, i) => (
+              <div key={i} className="p-8 bg-[#F5F5F5] rounded-2xl border border-transparent hover:border-[#F4B400] transition-all group">
+                <h3 className="text-xl font-bold text-[#0F2C59] mb-3 group-hover:text-[#F4B400] transition-colors">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link href="/services" className="bg-[#0F2C59] text-white px-8 py-3 rounded-xl font-bold hover:bg-[#F4B400] hover:text-[#0F2C59] transition-all">
+              Voir tous nos services
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* CTA Section */}
+      <section className="py-20 bg-[#0F2C59] relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[#F4B400]/10 rounded-full -mr-32 -mt-32 animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#F4B400]/10 rounded-full -ml-32 -mb-32 animate-pulse"></div>
+        <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-8 font-poppins">Inscrivez-vous dès aujourd’hui et construisez votre avenir avec nous.</h2>
+          <Link href="/inscriptions" className="inline-block bg-[#F4B400] text-[#0F2C59] px-12 py-5 rounded-xl font-bold text-xl hover:bg-white hover:scale-105 transition-all shadow-lg">
+            Je m’inscris
+          </Link>
+        </div>
+      </section>
+
+      {/* Contact Preview Section */}
       <section id="contact" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-[#0F2C59] mb-4 font-poppins">Contactez-nous</h2>
               <p className="text-gray-600 mb-10 text-lg">Nous sommes à votre écoute pour toute question ou demande d'inscription.</p>
-              <div className="space-y-8">
+              <div className="space-y-8 mb-10">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 bg-[#F5F5F5] rounded-full flex items-center justify-center text-[#0F2C59] shrink-0">
                     📍
@@ -77,21 +108,14 @@ export default function Home() {
                   <div>
                     <h4 className="font-bold text-gray-900 text-lg">Téléphones</h4>
                     <p className="text-gray-600">{CONTACT_INFO.phone1}</p>
-                    <p className="text-gray-600">{CONTACT_INFO.phone2}</p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-[#F5F5F5] rounded-full flex items-center justify-center text-[#0F2C59] shrink-0">
-                    ✉️
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-lg">Email</h4>
-                    <p className="text-gray-600 break-all">{CONTACT_INFO.email}</p>
                   </div>
                 </div>
               </div>
+              <Link href="/contact" className="text-[#0F2C59] font-bold border-b-2 border-[#F4B400] pb-1 hover:text-[#F4B400] transition-all">
+                Voir toutes les coordonnées et plan d'accès
+              </Link>
             </div>
-            <div className="bg-gray-100 h-[500px] rounded-3xl flex items-center justify-center text-gray-400 border border-gray-200 shadow-inner overflow-hidden">
+            <div className="bg-gray-100 h-[400px] rounded-3xl flex items-center justify-center text-gray-400 border border-gray-200 shadow-inner overflow-hidden">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.312345678901!2d2.445678!3d6.356789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023555555555555%3A0x5555555555555555!2sAkpakpa%20St%20Martin%2C%20Cotonou!5e0!3m2!1sfr!2sbj!4v1710000000000!5m2!1sfr!2sbj" 
                 width="100%" 

@@ -16,51 +16,70 @@ export const CONTACT_INFO = {
 
 export const FORMATIONS = [
   {
-    id: "graphisme",
-    title: "Graphisme – Sérigraphie",
+    id: "graphisme-serigraphie",
+    title: "Graphisme-Sérigraphie",
     category: "Domaine Numérique & Créatif",
-    duration: "6 mois",
-    cost: "À consulter",
-    image: "/next.svg", // Placeholder
+    content: "Initiation en informatique, les bases et principes du design graphique, typographie et théorie des couleurs, conception d’une identité visuelle, sérigraphie manuelle digitale et personnalisation.",
+    duration: "09 mois de cours, 03 mois de stage",
+    cost: "250 000 FCFA",
+    image: "/next.svg",
+    level: "CEP au minimum"
   },
   {
-    id: "photo",
+    id: "photographie-design",
     title: "Photographie & Design",
     category: "Domaine Numérique & Créatif",
-    duration: "6 mois",
+    content: "Techniques de prise de vue, retouche photo professionnelle, design de mise en page, éclairage studio.",
+    duration: "06 mois",
     cost: "À consulter",
     image: "/next.svg",
+    level: "CEP au minimum"
   },
   {
     id: "audiovisuel",
     title: "Audiovisuel",
     category: "Domaine Numérique & Créatif",
-    duration: "8 mois",
+    content: "Montage vidéo, prise de son, scénarisation, réalisation de clips et documentaires.",
+    duration: "08 mois",
     cost: "À consulter",
     image: "/next.svg",
+    level: "CEP au minimum"
   },
   {
-    id: "makeup",
+    id: "makeup-onglerie",
     title: "Make-up & Onglerie",
     category: "Beauté & Esthétique",
-    duration: "4 mois",
+    content: "Maquillage professionnel, soins du visage, pose d'ongles, manucure et pédicure.",
+    duration: "04 mois",
     cost: "À consulter",
     image: "/next.svg",
+    level: "CEP au minimum"
   },
   {
     id: "informatique",
     title: "Informatique",
     category: "Domaine Numérique & Créatif",
-    duration: "3 mois",
+    content: "Bureautique (Word, Excel, PowerPoint), navigation internet, maintenance de base.",
+    duration: "03 mois",
     cost: "À consulter",
     image: "/next.svg",
+    level: "CEP au minimum"
   },
   {
-    id: "secretariat",
-    title: "Secrétariat bureautique",
-    category: "Domaine Numérique & Créatif",
-    duration: "6 mois",
+    id: "cuisine-restauration",
+    title: "Cuisine & Restauration",
+    category: "Cuisine & Restauration",
+    content: "Cuisine africaine et européenne, pâtisserie, gestion de restaurant, hygiène alimentaire.",
+    duration: "06 mois",
     cost: "À consulter",
     image: "/next.svg",
-  },
+    level: "CEP au minimum"
+  }
+];
+
+export const SERVICES = [
+  { title: "Sérigraphie", description: "Impression sur tous supports." },
+  { title: "Impression personnalisée", description: "T-shirts, tasses, gadgets." },
+  { title: "Création graphique", description: "Logos, affiches, flyers." },
+  { title: "Couverture événementielle", description: "Photo et vidéo pour vos événements." },
 ];
