@@ -1,7 +1,12 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { FORMATIONS } from '@/constants';
+import { FORMATIONS, CONTACT_INFO } from '@/constants';
 import Link from 'next/link';
+import { 
+  ClockIcon, 
+  AcademicCapIcon, 
+  ArrowRightIcon 
+} from '@heroicons/react/24/outline';
 
 export default function FormationsPage() {
   return (
@@ -18,26 +23,39 @@ export default function FormationsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {FORMATIONS.map((formation) => (
-              <div key={formation.id} className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 flex flex-col hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                <div className="h-56 bg-[#0F2C59]/5 relative flex items-center justify-center text-[#0F2C59]/20 font-bold uppercase tracking-widest italic">
-                  [Image: {formation.title}]
-                </div>
-                <div className="p-8 flex-grow flex flex-col">
-                  <div className="flex justify-between items-start mb-4">
-                    <span className="text-xs font-bold text-[#F4B400] uppercase tracking-widest bg-[#F4B400]/10 px-3 py-1 rounded-full">{formation.category}</span>
+              <div key={formation.id} className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 flex flex-col hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group">
+                <div 
+                  className="h-56 bg-cover bg-center relative transition-transform duration-500 group-hover:scale-110"
+                  style={{ backgroundImage: `url(${formation.image})` }}
+                >
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                  <div className="absolute top-4 left-4">
+                    <span className="text-xs font-bold text-white uppercase tracking-widest bg-[#F4B400] px-3 py-1 rounded-full shadow-lg">
+                      {formation.category}
+                    </span>
                   </div>
+                </div>
+                <div className="p-8 flex-grow flex flex-col bg-white relative z-10">
                   <h3 className="text-2xl font-bold text-[#0F2C59] mb-4 font-poppins">{formation.title}</h3>
-                  <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">{formation.content}</p>
+                  <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed font-medium">
+                    {formation.content}
+                  </p>
                   
                   <div className="mt-auto space-y-4 pt-6 border-t border-gray-50">
-                    <div className="flex items-center text-sm text-gray-500 gap-2">
-                      <span className="font-bold text-[#0F2C59]">Durée:</span> {formation.duration}
+                    <div className="flex items-center text-sm text-gray-600 gap-2 font-bold">
+                      <ClockIcon className="h-5 w-5 text-[#F4B400]" />
+                      <span>Durée: {formation.duration}</span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600 gap-2 font-bold">
+                      <AcademicCapIcon className="h-5 w-5 text-[#F4B400]" />
+                      <span>Niveau: {formation.level}</span>
                     </div>
                     <Link 
                       href={`/formations/${formation.id}`} 
-                      className="block w-full text-center py-4 bg-[#0F2C59] text-white font-bold rounded-xl hover:bg-[#F4B400] hover:text-[#0F2C59] transition-all"
+                      className="flex items-center justify-center gap-2 w-full text-center py-4 bg-[#0F2C59] text-white font-bold rounded-xl hover:bg-[#F4B400] hover:text-[#0F2C59] transition-all group-hover:shadow-xl"
                     >
                       Détails de la formation
+                      <ArrowRightIcon className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
                 </div>

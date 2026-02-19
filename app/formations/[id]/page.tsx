@@ -3,6 +3,15 @@ import Footer from '@/components/Footer';
 import { FORMATIONS, CONTACT_INFO } from '@/constants';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { 
+  ClockIcon, 
+  CurrencyDollarIcon, 
+  AcademicCapIcon, 
+  BriefcaseIcon, 
+  CheckCircleIcon,
+  ChatBubbleLeftRightIcon,
+  MapPinIcon
+} from '@heroicons/react/24/outline';
 
 export default function FormationDetailPage({ params }: { params: { id: string } }) {
   const formation = FORMATIONS.find(f => f.id === params.id);
@@ -32,10 +41,10 @@ export default function FormationDetailPage({ params }: { params: { id: string }
           </h1>
           <div className="flex flex-wrap justify-center gap-6 md:gap-12 text-lg font-bold">
              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-3 rounded-2xl border border-white/20">
-               <span className="text-[#F4B400] text-2xl">⏳</span> {formation.duration}
+               <ClockIcon className="h-6 w-6 text-[#F4B400]" /> {formation.duration}
              </div>
              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-3 rounded-2xl border border-white/20">
-               <span className="text-[#F4B400] text-2xl">💰</span> {formation.cost}
+               <CurrencyDollarIcon className="h-6 w-6 text-[#F4B400]" /> {formation.cost}
              </div>
           </div>
         </div>
@@ -74,9 +83,7 @@ export default function FormationDetailPage({ params }: { params: { id: string }
                     "Immersion pratique en conditions réelles"
                   ].map((obj, i) => (
                     <div key={i} className="flex gap-4 items-center bg-white p-5 rounded-2xl border border-gray-50 shadow-sm group hover:border-[#F4B400] transition-colors">
-                      <span className="w-8 h-8 bg-[#F4B400]/20 text-[#0F2C59] rounded-full flex items-center justify-center font-bold shrink-0">
-                        {i + 1}
-                      </span>
+                      <CheckCircleIcon className="h-6 w-6 text-[#F4B400] shrink-0" />
                       <p className="font-bold text-[#0F2C59]">{obj}</p>
                     </div>
                   ))}
@@ -91,7 +98,8 @@ export default function FormationDetailPage({ params }: { params: { id: string }
                 </h2>
                 <div className="flex flex-wrap gap-4">
                   {formation.outcomes?.map((job, i) => (
-                    <span key={i} className="px-8 py-4 bg-white text-[#0F2C59] font-extrabold rounded-2xl border-2 border-gray-100 shadow-sm hover:border-[#F4B400] hover:text-[#F4B400] transition-all cursor-default">
+                    <span key={i} className="flex items-center gap-2 px-8 py-4 bg-white text-[#0F2C59] font-extrabold rounded-2xl border-2 border-gray-100 shadow-sm hover:border-[#F4B400] hover:text-[#F4B400] transition-all cursor-default">
+                      <BriefcaseIcon className="h-5 w-5" />
                       {job}
                     </span>
                   ))}
@@ -106,21 +114,21 @@ export default function FormationDetailPage({ params }: { params: { id: string }
                  <h3 className="text-2xl font-bold mb-10 font-poppins text-[#F4B400]">Informations Clés</h3>
                  <div className="space-y-8">
                    <div className="flex items-start gap-5">
-                     <span className="text-3xl bg-white/10 p-3 rounded-2xl">🎓</span>
+                     <AcademicCapIcon className="h-8 w-8 text-[#F4B400] bg-white/10 p-1 rounded-lg shrink-0" />
                      <div>
                        <p className="text-white/60 text-xs font-black uppercase tracking-widest mb-1">Niveau Requis</p>
                        <p className="font-bold text-lg">{formation.level}</p>
                      </div>
                    </div>
                    <div className="flex items-start gap-5">
-                     <span className="text-3xl bg-white/10 p-3 rounded-2xl">⚡</span>
+                     <CheckCircleIcon className="h-8 w-8 text-[#F4B400] bg-white/10 p-1 rounded-lg shrink-0" />
                      <div>
                        <p className="text-white/60 text-xs font-black uppercase tracking-widest mb-1">Type</p>
                        <p className="font-bold text-lg">Formation Certifiante</p>
                      </div>
                    </div>
                    <div className="flex items-start gap-5">
-                     <span className="text-3xl bg-white/10 p-3 rounded-2xl">🏛️</span>
+                     <MapPinIcon className="h-8 w-8 text-[#F4B400] bg-white/10 p-1 rounded-lg shrink-0" />
                      <div>
                        <p className="text-white/60 text-xs font-black uppercase tracking-widest mb-1">Lieu</p>
                        <p className="font-bold text-lg">CFPA GOD'S PLAN, Akpakpa</p>
@@ -138,8 +146,9 @@ export default function FormationDetailPage({ params }: { params: { id: string }
                     <a 
                       href={`https://wa.me/${CONTACT_INFO.whatsapp}?text=Je souhaite en savoir plus sur la formation ${formation.title}`}
                       target="_blank"
-                      className="block w-full text-center py-4 border-2 border-white/20 text-white font-bold rounded-2xl hover:bg-white/10 transition-all"
+                      className="flex items-center justify-center gap-2 w-full text-center py-4 border-2 border-white/20 text-white font-bold rounded-2xl hover:bg-white/10 transition-all"
                     >
+                      <ChatBubbleLeftRightIcon className="h-5 w-5" />
                       Nous écrire sur WhatsApp
                     </a>
                  </div>
@@ -158,7 +167,7 @@ export default function FormationDetailPage({ params }: { params: { id: string }
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
            <div className="w-20 h-20 bg-[#F4B400] rounded-full flex items-center justify-center mx-auto mb-10 text-white shadow-xl">
-             <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9125 16 16.0171 16H19.0171V14.0171L12.0171 14.0171V5L21.0171 5V16H16.0171V18L16.0171 21H14.0172ZM3 21L3 18C3 16.8954 3.89543 16 5 16H8V14L1 14V5L10 5V16H5V18L5 21H3Z" /></svg>
+             <ChatBubbleLeftRightIcon className="w-10 h-10" />
            </div>
            <p className="text-2xl md:text-3xl text-[#0F2C59] font-bold leading-relaxed italic mb-10">
              "La formation en {formation.title} m'a apporté bien plus que de la technique. J'ai appris la rigueur et le sens du détail qui me permettent aujourd'hui de vivre de ma passion."
