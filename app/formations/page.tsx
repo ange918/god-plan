@@ -33,17 +33,11 @@ export default function FormationsPage() {
                     <div className="flex items-center text-sm text-gray-500 gap-2">
                       <span className="font-bold text-[#0F2C59]">Durée:</span> {formation.duration}
                     </div>
-                    <div className="flex items-center text-sm text-gray-500 gap-2">
-                      <span className="font-bold text-[#0F2C59]">Coût:</span> {formation.cost}
-                    </div>
-                    <div className="flex items-center text-sm text-gray-500 gap-2">
-                      <span className="font-bold text-[#0F2C59]">Niveau:</span> {formation.level}
-                    </div>
                     <Link 
-                      href="/inscriptions" 
+                      href={`/formations/${formation.id}`} 
                       className="block w-full text-center py-4 bg-[#0F2C59] text-white font-bold rounded-xl hover:bg-[#F4B400] hover:text-[#0F2C59] transition-all"
                     >
-                      S'inscrire à cette formation
+                      Détails de la formation
                     </Link>
                   </div>
                 </div>
