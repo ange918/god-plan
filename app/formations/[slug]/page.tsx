@@ -10,11 +10,12 @@ import { CONTACT_INFO } from '@/constants';
 import { Metadata } from 'next';
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const formation = formations.find((f) => f.slug === params.slug);
+  const { slug } = await params;
+  const formation = formations.find((f) => f.slug === slug);
   if (!formation) return {};
 
   return {
@@ -23,14 +24,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return formations.map((f) => ({
     slug: f.slug,
   }));
 }
 
-export default function FormationPage({ params }: Props) {
-  const formation = formations.find((f) => f.slug === params.slug);
+export default async function FormationPage({ params }: Props) {
+  const { slug } = await params;
+  const formation = formations.find((f) => f.slug === slug);
 
   if (!formation) {
     notFound();
