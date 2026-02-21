@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,21 +21,31 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-2xl font-bold text-[#0F2C59] tracking-tight">
-              GOD’S PLAN
+            <Link href="/" className="flex items-center gap-2 group">
+              <div className="relative w-12 h-12 overflow-hidden rounded-xl border-2 border-[#0F2C59] group-hover:scale-105 transition-transform bg-[#0F2C59]">
+                <Image
+                  src="/next.svg"
+                  alt="Logo GOD'S PLAN"
+                  fill
+                  className="object-contain p-1 invert"
+                />
+              </div>
+              <span className="text-xl font-black text-[#0F2C59] tracking-tighter leading-none hidden sm:block">
+                GOD'S<br/>PLAN
+              </span>
             </Link>
           </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6 lg:space-x-8 items-center">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="text-gray-700 hover:text-[#0F2C59] font-semibold transition-colors">
+              <Link key={link.href} href={link.href} className="text-gray-700 hover:text-[#0F2C59] font-bold transition-colors text-sm uppercase tracking-wider">
                 {link.label}
               </Link>
             ))}
             <Link 
               href="/inscriptions" 
-              className="bg-[#F4B400] text-[#0F2C59] px-6 py-2.5 rounded-xl font-bold hover:bg-[#e0a500] transition-all shadow-md active:scale-95"
+              className="bg-[#F4B400] text-[#0F2C59] px-6 py-2.5 rounded-full font-black hover:bg-[#0F2C59] hover:text-white transition-all shadow-md active:scale-95 text-sm uppercase tracking-wider"
             >
               S'inscrire
             </Link>
@@ -44,7 +55,7 @@ export default function Header() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-[#0F2C59] hover:text-[#F4B400] focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-xl text-[#0F2C59] hover:bg-[#F5F5F5] focus:outline-none transition-colors"
             >
               <svg className="h-8 w-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                 {isOpen ? (
@@ -61,13 +72,13 @@ export default function Header() {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden bg-white border-b border-gray-100 animate-in slide-in-from-top duration-300">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="px-4 pt-2 pb-6 space-y-2 sm:px-3">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-3 py-4 text-base font-bold text-gray-700 hover:text-[#0F2C59] hover:bg-gray-50 rounded-lg"
+                className="block px-4 py-4 text-base font-black text-gray-700 hover:text-[#0F2C59] hover:bg-gray-50 rounded-2xl transition-all"
               >
                 {link.label}
               </Link>
@@ -75,7 +86,7 @@ export default function Header() {
             <Link
               href="/inscriptions"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-center bg-[#F4B400] text-[#0F2C59] px-3 py-4 rounded-xl font-bold mt-4"
+              className="block w-full text-center bg-[#F4B400] text-[#0F2C59] px-4 py-5 rounded-2xl font-black mt-6 text-lg uppercase tracking-widest shadow-lg active:scale-95 transition-all"
             >
               S'inscrire
             </Link>
