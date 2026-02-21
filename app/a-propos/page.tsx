@@ -23,7 +23,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-white">
       <Header />
       <div className="pt-32 pb-20 bg-[#0F2C59] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524178232363-1fb28f74b671?q=80&w=2070')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('/about-hero.jpg')] bg-cover bg-center opacity-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-poppins">À Propos de GOD’S PLAN</h1>
           <p className="text-xl text-[#F4B400] max-w-2xl mx-auto font-medium italic tracking-wide">"Transformer des potentiels en expertise opérationnelle."</p>
@@ -36,7 +36,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
              <div className="relative">
                <div className="aspect-square bg-gray-100 rounded-[3rem] overflow-hidden shadow-2xl rotate-3 border-8 border-white group">
-                 <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070" alt="Centre" className="w-full h-full object-cover -rotate-3 scale-110 group-hover:scale-125 transition-transform duration-700" />
+                 <img src="/centre-photo.jpg" alt="Centre" className="w-full h-full object-cover -rotate-3 scale-110 group-hover:scale-125 transition-transform duration-700" />
                </div>
                <div className="absolute -bottom-10 -right-10 bg-[#F4B400] p-10 rounded-3xl shadow-xl hidden md:block border-4 border-[#0F2C59]">
                  <p className="text-5xl font-black text-[#0F2C59]">8+</p>

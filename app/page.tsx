@@ -66,7 +66,7 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-video bg-gray-200 rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white group">
                 <img 
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop" 
+                  src="/home-about.jpg" 
                   alt="Étudiants GOD'S PLAN" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 />
@@ -136,18 +136,18 @@ export default function Home() {
             >
               <div className="space-y-4">
                 <div className="h-64 bg-gray-200 rounded-3xl overflow-hidden shadow-lg border-4 border-white group">
-                  <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1000" alt="Formation" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <img src="/vision-1.jpg" alt="Formation" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
                 <div className="h-80 bg-gray-200 rounded-3xl overflow-hidden shadow-lg border-4 border-white group">
-                   <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1000" alt="Design" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                   <img src="/vision-2.jpg" alt="Design" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
               </div>
               <div className="space-y-4 pt-12">
                 <div className="h-80 bg-gray-200 rounded-3xl overflow-hidden shadow-lg border-4 border-white group">
-                   <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1000" alt="Tech" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                   <img src="/vision-3.jpg" alt="Tech" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
                 <div className="h-64 bg-gray-200 rounded-3xl overflow-hidden shadow-lg border-4 border-white group">
-                   <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000" alt="Team" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                   <img src="/vision-4.jpg" alt="Team" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
               </div>
             </motion.div>
