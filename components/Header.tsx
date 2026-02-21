@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,12 +21,15 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative w-12 h-12 overflow-hidden rounded-xl border-2 border-[#0F2C59] group-hover:scale-105 transition-transform bg-[#0F2C59]">
-                <Image
-                  src="/next.svg"
+              <div className="relative w-12 h-12 overflow-hidden rounded-xl border-2 border-[#0F2C59] group-hover:scale-105 transition-transform bg-[#0F2C59] flex items-center justify-center">
+                <img
+                  src="/logo.png"
                   alt="Logo GOD'S PLAN"
-                  fill
-                  className="object-contain p-1 invert"
+                  className="w-full h-full object-contain p-1 invert"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "/next.svg";
+                  }}
                 />
               </div>
               <span className="text-xl font-black text-[#0F2C59] tracking-tighter leading-none hidden sm:block">
