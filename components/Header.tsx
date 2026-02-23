@@ -21,15 +21,11 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative w-12 h-12 overflow-hidden rounded-xl border-2 border-[#0F2C59] group-hover:scale-105 transition-transform bg-[#0F2C59] flex items-center justify-center">
+              <div className="relative w-14 h-14 overflow-hidden rounded-xl border-2 border-[#0F2C59] group-hover:scale-105 transition-transform bg-white flex items-center justify-center">
                 <img
-                  src="/logo.png"
-                  alt="Logo GOD'S PLAN"
-                  className="w-full h-full object-contain p-1 invert"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = "/next.svg";
-                  }}
+                  src="/logo.jpg"
+                  alt="Logo CFPA GOD'S PLAN"
+                  className="w-full h-full object-contain p-0.5"
                 />
               </div>
               <span className="text-xl font-black text-[#0F2C59] tracking-tighter leading-none hidden sm:block">
