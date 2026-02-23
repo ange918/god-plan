@@ -34,12 +34,15 @@ export default function Home() {
       <Hero />
       
       {/* Home About Section */}
-      <section className="py-24 bg-[#F5F5F5] relative">
+      <motion.section 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="py-24 bg-[#F5F5F5] relative"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            {...fadeInUp}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
-          >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
               <span className="text-[#F4B400] font-black uppercase tracking-[0.3em] text-sm mb-4 block">Découvrez Notre Centre</span>
               <h2 className="text-4xl md:text-5xl font-black text-[#0F2C59] mb-8 font-poppins leading-tight">
@@ -55,39 +58,42 @@ export default function Home() {
                 </p>
               </div>
               <div className="mt-10 flex gap-4">
-                <Link href="/a-propos" className="bg-[#0F2C59] text-white px-8 py-4 rounded-full font-black hover:bg-[#F4B400] hover:text-[#0F2C59] transition-all shadow-lg active:scale-95 uppercase text-sm tracking-widest">
+                <Link href="/a-propos" className="bg-[#0F2C59] text-white px-6 py-3 rounded-full font-black hover:bg-[#F4B400] hover:text-[#0F2C59] transition-all shadow-lg active:scale-95 uppercase text-xs tracking-widest">
                   Notre Histoire
                 </Link>
-                <Link href="/galerie" className="border-2 border-[#0F2C59] text-[#0F2C59] px-8 py-4 rounded-full font-black hover:bg-[#0F2C59] hover:text-white transition-all active:scale-95 uppercase text-sm tracking-widest">
+                <Link href="/galerie" className="border-2 border-[#0F2C59] text-[#0F2C59] px-6 py-3 rounded-full font-black hover:bg-[#0F2C59] hover:text-white transition-all active:scale-95 uppercase text-xs tracking-widest">
                   Voir la galerie
                 </Link>
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-video bg-gray-200 rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white group">
+              <div className="aspect-video bg-gray-200 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white group">
                 <img 
                   src="/home-about.jpg" 
                   alt="Étudiants GOD'S PLAN" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 />
               </div>
-              <div className="absolute -bottom-8 -left-8 bg-[#F4B400] p-8 rounded-[2rem] shadow-xl text-[#0F2C59] border-4 border-[#0F2C59]">
-                <p className="text-4xl font-black leading-none">100%</p>
-                <p className="font-bold uppercase tracking-widest text-xs mt-1">Pratique Immédiate</p>
+              <div className="absolute -bottom-6 -left-6 bg-[#F4B400] p-6 rounded-2xl shadow-xl text-[#0F2C59] border-2 border-[#0F2C59]">
+                <p className="text-3xl font-black leading-none">100%</p>
+                <p className="font-bold uppercase tracking-widest text-[10px] mt-1">Pratique Immédiate</p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Vision Section */}
-      <section className="py-24 bg-white overflow-hidden">
+      <motion.section 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        className="py-24 bg-white overflow-hidden"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <motion.div 
-              {...fadeInUp}
-              className="relative"
-            >
+            <div className="relative">
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#F4B400]/10 rounded-full blur-3xl"></div>
               <h2 className="text-4xl font-bold text-[#0F2C59] mb-8 font-poppins relative flex items-center gap-3">
                 <LightBulbIcon className="h-10 w-10 text-[#F4B400]" />
@@ -117,45 +123,58 @@ export default function Home() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex gap-4 p-5 rounded-2xl hover:bg-[#F5F5F5] transition-colors border border-transparent hover:border-gray-100 group"
+                    className="flex gap-4 p-4 rounded-xl hover:bg-[#F5F5F5] transition-colors border border-transparent hover:border-gray-100 group"
                   >
-                    <div className="w-12 h-12 bg-[#0F2C59] text-[#F4B400] rounded-xl flex items-center justify-center shrink-0 font-bold group-hover:scale-110 transition-transform">
-                       <item.icon className="h-6 w-6" />
+                    <div className="w-10 h-10 bg-[#0F2C59] text-[#F4B400] rounded-lg flex items-center justify-center shrink-0 font-bold group-hover:scale-110 transition-transform">
+                       <item.icon className="h-5 w-5" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-[#0F2C59] text-lg">{item.t}</h4>
-                      <p className="text-gray-600">{item.d}</p>
+                      <h4 className="font-bold text-[#0F2C59] text-base">{item.t}</h4>
+                      <p className="text-gray-600 text-sm">{item.d}</p>
                     </div>
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
-            <motion.div 
-              {...fadeInUp}
-              className="grid grid-cols-2 gap-4"
-            >
+            </div>
+            <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
-                <div className="h-64 bg-gray-200 rounded-3xl overflow-hidden shadow-lg border-4 border-white group">
-                  <img src="/vision-1.jpg" alt="Formation" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                </div>
-                <div className="h-80 bg-gray-200 rounded-3xl overflow-hidden shadow-lg border-4 border-white group">
-                   <img src="/vision-2.jpg" alt="Design" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                </div>
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  className="h-64 bg-gray-200 rounded-2xl overflow-hidden shadow-lg border-2 border-white group"
+                >
+                  <img src="/vision-1.jpg" alt="Formation" className="w-full h-full object-cover transition-transform duration-700" />
+                </motion.div>
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  className="h-80 bg-gray-200 rounded-2xl overflow-hidden shadow-lg border-2 border-white group"
+                >
+                   <img src="/vision-2.jpg" alt="Design" className="w-full h-full object-cover transition-transform duration-700" />
+                </motion.div>
               </div>
               <div className="space-y-4 pt-12">
-                <div className="h-80 bg-gray-200 rounded-3xl overflow-hidden shadow-lg border-4 border-white group">
-                   <img src="/vision-3.jpg" alt="Tech" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                </div>
-                <div className="h-64 bg-gray-200 rounded-3xl overflow-hidden shadow-lg border-4 border-white group">
-                   <img src="/vision-4.jpg" alt="Team" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                </div>
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  className="h-80 bg-gray-200 rounded-2xl overflow-hidden shadow-lg border-2 border-white group"
+                >
+                   <img src="/vision-3.jpg" alt="Tech" className="w-full h-full object-cover transition-transform duration-700" />
+                </motion.div>
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  className="h-64 bg-gray-200 rounded-2xl overflow-hidden shadow-lg border-2 border-white group"
+                >
+                   <img src="/vision-4.jpg" alt="Team" className="w-full h-full object-cover transition-transform duration-700" />
+                </motion.div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <motion.div {...fadeInUp}>
+      <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
         <Formations />
       </motion.div>
       

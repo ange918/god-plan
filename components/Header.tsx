@@ -20,7 +20,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative w-14 h-14 overflow-hidden rounded-xl border-2 border-[#0F2C59] group-hover:scale-105 transition-transform bg-white flex items-center justify-center">
+              <div className="relative w-12 h-12 overflow-hidden rounded-xl group-hover:scale-105 transition-transform bg-white flex items-center justify-center">
                 <img
                   src="/logo.jpg"
                   alt="Logo CFPA GOD'S PLAN"
@@ -42,7 +42,7 @@ export default function Header() {
             ))}
             <Link 
               href="/inscriptions" 
-              className="bg-[#F4B400] text-[#0F2C59] px-6 py-2.5 rounded-full font-black hover:bg-[#0F2C59] hover:text-white transition-all shadow-md active:scale-95 text-sm uppercase tracking-wider"
+              className="bg-[#F4B400] text-[#0F2C59] px-5 py-2 rounded-full font-black hover:bg-[#0F2C59] hover:text-white transition-all shadow-md active:scale-95 text-xs uppercase tracking-wider"
             >
               S'inscrire
             </Link>

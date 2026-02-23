@@ -28,15 +28,15 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-6">
             <a 
               href="/inscriptions" 
-              className="inline-flex justify-center items-center px-12 py-6 border border-transparent text-xl font-black rounded-full text-[#0F2C59] bg-[#F4B400] hover:bg-white transition-all shadow-[0_20px_50px_rgba(244,180,0,0.3)] hover:-translate-y-2 active:scale-95 uppercase tracking-widest"
+              className="inline-flex justify-center items-center px-8 py-4 border border-transparent text-lg font-black rounded-full text-[#0F2C59] bg-[#F4B400] hover:bg-white transition-all shadow-[0_20px_50px_rgba(244,180,0,0.3)] hover:-translate-y-1 active:scale-95 uppercase tracking-widest"
             >
-              S’inscrire maintenant
+              S’inscrire
             </a>
             <a 
               href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex justify-center items-center px-12 py-6 border-2 border-white/40 backdrop-blur-md text-xl font-black rounded-full text-white hover:bg-white hover:text-[#0F2C59] transition-all hover:-translate-y-2 active:scale-95 uppercase tracking-widest"
+              className="inline-flex justify-center items-center px-8 py-4 border-2 border-white/40 backdrop-blur-md text-lg font-black rounded-full text-white hover:bg-white hover:text-[#0F2C59] transition-all hover:-translate-y-1 active:scale-95 uppercase tracking-widest"
             >
               WhatsApp
             </a>

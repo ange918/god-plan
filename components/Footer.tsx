@@ -4,9 +4,12 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
-          <div>
-            <h3 className="text-2xl font-bold text-white mb-4">GOD’S PLAN</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8 items-center">
+          <div className="flex flex-col items-center md:items-start">
+            <div className="w-20 h-20 bg-white rounded-xl mb-4 flex items-center justify-center overflow-hidden">
+              <img src="/logo.jpg" alt="Logo CFPA GOD'S PLAN" className="w-full h-full object-contain p-1" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-2">GOD’S PLAN</h3>
             <p className="text-gray-400 italic">"Nous construisons votre avenir maintenant !"</p>
           </div>
           <div>
