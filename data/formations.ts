@@ -22,7 +22,7 @@ export const formations: Formation[] = [
     category: "Domaine Numérique & Créatif",
     duree: "09 mois de cours, 03 mois de stage",
     cout: "250 000 FCFA",
-    image: "/graphisme.jpg",
+    image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2071",
     contenu: [
       "Initiation en informatique",
       "Bases et principes du design graphique",
@@ -47,7 +47,7 @@ export const formations: Formation[] = [
     category: "Domaine Numérique & Créatif",
     duree: "09 mois de cours, 03 mois de stage",
     cout: "250 000 FCFA",
-    image: "/photographie.jpg",
+    image: "https://images.unsplash.com/photo-1554048612-b6a482bc67e5?q=80&w=2070",
     contenu: [
       "Prise de vue professionnelle",
       "Gestion de la lumière",
@@ -71,7 +71,7 @@ export const formations: Formation[] = [
     category: "Artisanat & Design",
     duree: "01 mois",
     cout: "50 000 FCFA",
-    image: "/gadgets.jpg",
+    image: "https://images.unsplash.com/photo-1513519245088-0e12902e35ca?q=80&w=2070",
     options: [
       { label: "Résine", price: "50 000 FCFA" }
     ],
@@ -97,7 +97,7 @@ export const formations: Formation[] = [
     category: "Technique & Impression",
     duree: "04 mois de cours, 02 mois de stage",
     cout: "150 000 FCFA",
-    image: "/serigraphie.jpg",
+    image: "https://images.unsplash.com/photo-1562185000-12e4f02e2020?q=80&w=2070",
     contenu: [
       "Impression sur tout support",
       "Techniques de découpe",
@@ -121,7 +121,7 @@ export const formations: Formation[] = [
     category: "Multimédia",
     duree: "01 an",
     cout: "300 000 FCFA",
-    image: "/audiovisuel.jpg",
+    image: "https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=2070",
     contenu: [
       "Cadrage et techniques de prise de vue",
       "Montage vidéo professionnel",
@@ -145,7 +145,7 @@ export const formations: Formation[] = [
     category: "Beauté",
     duree: "04 mois",
     cout: "À consulter",
-    image: "/makeup.jpg",
+    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2071",
     options: [
       { label: "Frais de pratique", price: "50 000 FCFA" }
     ],
@@ -172,7 +172,7 @@ export const formations: Formation[] = [
     category: "Bureautique",
     duree: "03 mois",
     cout: "À consulter",
-    image: "/informatique.jpg",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070",
     contenu: [
       "Environnement Windows",
       "Saisie kilométrique",
@@ -195,7 +195,7 @@ export const formations: Formation[] = [
     category: "Bureautique",
     duree: "06 mois",
     cout: "À consulter",
-    image: "/secretariat.jpg",
+    image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=2070",
     contenu: [
       "Accueil et communication",
       "Gestion de courrier",
@@ -218,7 +218,7 @@ export const formations: Formation[] = [
     category: "Domaine Numérique & Créatif",
     duree: "06 mois",
     cout: "À consulter",
-    image: "/design.jpg",
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000",
     contenu: [
       "Logiciels Adobe (Photoshop, Illustrator)",
       "Théorie du design",

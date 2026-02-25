@@ -27,19 +27,19 @@ export default function Formations() {
                    <ClockIcon className="h-5 w-5 text-[#F4B400]" /> {formation.duree}
                 </div>
                 <Link 
-                  href={`/formations/${formation.slug}`}
-                  className="flex items-center justify-center gap-2 w-full text-center py-4 bg-white border-2 border-[#0F2C59] text-[#0F2C59] font-bold rounded-2xl hover:bg-[#0F2C59] hover:text-white transition-all shadow-md active:scale-95"
+                  href={`/services-formations/${formation.slug}`}
+                  className="flex items-center justify-center gap-2 w-full text-center py-3 bg-white border-2 border-[#0F2C59] text-[#0F2C59] font-black rounded-full hover:bg-[#0F2C59] hover:text-white transition-all shadow-md active:scale-95 text-xs uppercase tracking-widest"
                 >
-                  Découvrir le programme
-                  <ArrowRightIcon className="h-5 w-5" />
+                  Découvrir
+                  <ArrowRightIcon className="h-4 w-4" />
                 </Link>
               </div>
             </div>
           ))}
         </div>
         <div className="text-center mt-16">
-          <Link href="/formations" className="inline-flex items-center gap-2 text-[#0F2C59] font-extrabold text-xl hover:text-[#F4B400] transition-colors group">
-            Voir toutes nos formations
+          <Link href="/services-formations" className="inline-flex items-center gap-2 text-[#0F2C59] font-black text-lg hover:text-[#F4B400] transition-colors group uppercase tracking-widest">
+            Toutes nos formations
             <span className="group-hover:translate-x-2 transition-transform">→</span>
           </Link>
         </div>
