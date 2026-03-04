@@ -117,11 +117,11 @@ export default function AboutPage() {
             }
           ].map((member, i) => (
             <div key={i} className="group">
-              <div className="aspect-[3/4] mb-6 overflow-hidden rounded-2xl bg-gray-100 grayscale hover:grayscale-0 transition-all duration-500 shadow-lg">
-                <img src={member.img} alt={member.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="aspect-[3/4] mb-6 overflow-hidden rounded-2xl bg-gray-100 transition-all duration-500 shadow-lg">
+                <img src={member.img} alt={member.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
-              <h3 className="text-xl font-black text-[#0F2C59] mb-1 font-poppins">{member.name}</h3>
-              <p className="text-gray-500 font-bold text-sm uppercase tracking-wider">{member.role}</p>
+              <h3 className="text-lg font-black text-[#0F2C59] mb-1 font-poppins">{member.name}</h3>
+              <p className="text-gray-500 font-bold text-[10px] uppercase tracking-wider leading-relaxed">{member.role}</p>
             </div>
           ))}
         </div>

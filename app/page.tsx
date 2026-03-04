@@ -45,11 +45,11 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
               <span className="text-[#F4B400] font-black uppercase tracking-[0.3em] text-sm mb-4 block">Découvrez Notre Centre</span>
-              <h2 className="text-4xl md:text-5xl font-black text-[#0F2C59] mb-8 font-poppins leading-tight">
+              <h2 className="text-3xl md:text-4xl font-black text-[#0F2C59] mb-8 font-poppins leading-tight">
                 L'Excellence au Service de <br className="hidden md:block" />
                 <span className="text-[#F4B400]">Votre Avenir Professionnel</span>
               </h2>
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed font-medium">
+              <div className="space-y-6 text-base text-gray-700 leading-relaxed font-medium">
                 <p>
                   Le CFPA GOD'S PLAN est bien plus qu'un simple centre de formation. C'est un véritable tremplin vers l'emploi. Nous avons conçu nos programmes pour répondre aux exigences réelles des entreprises modernes au Bénin.
                 </p>

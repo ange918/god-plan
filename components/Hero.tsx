@@ -18,17 +18,17 @@ export default function Hero() {
           <div className="inline-block px-6 py-2 mb-8 bg-[#F4B400] text-[#0F2C59] font-black rounded-full text-sm uppercase tracking-[0.2em] shadow-xl animate-bounce">
              Admissions 2026 Ouvertes
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-white leading-[1.1] mb-8 font-poppins tracking-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-white leading-[1.1] mb-8 font-poppins tracking-tight">
             <span className="block mb-2">Centre Privé de Formation</span>
             <span className="block text-[#F4B400]">Professionnelle GOD'S PLAN</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-2xl font-medium leading-relaxed italic border-l-4 border-[#F4B400] pl-6 bg-[#0F2C59]/20 backdrop-blur-sm p-4 rounded-r-2xl">
+          <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl font-medium leading-relaxed italic border-l-4 border-[#F4B400] pl-6 bg-[#0F2C59]/20 backdrop-blur-sm p-4 rounded-r-2xl">
             "Nous construisons votre avenir maintenant !" Le pôle d'excellence pour maîtriser les métiers d'avenir au Bénin.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6">
+          <div className="flex flex-col sm:flex-row gap-4">
             <a 
               href="/inscriptions" 
-              className="inline-flex justify-center items-center px-8 py-4 border border-transparent text-lg font-black rounded-full text-[#0F2C59] bg-[#F4B400] hover:bg-white transition-all shadow-[0_20px_50px_rgba(244,180,0,0.3)] hover:-translate-y-1 active:scale-95 uppercase tracking-widest"
+              className="inline-flex justify-center items-center px-6 py-3 border border-transparent text-sm font-black rounded-full text-[#0F2C59] bg-[#F4B400] hover:bg-white transition-all shadow-lg hover:-translate-y-1 active:scale-95 uppercase tracking-widest"
             >
               S’inscrire
             </a>
@@ -36,7 +36,7 @@ export default function Hero() {
               href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex justify-center items-center px-8 py-4 border-2 border-white/40 backdrop-blur-md text-lg font-black rounded-full text-white hover:bg-white hover:text-[#0F2C59] transition-all hover:-translate-y-1 active:scale-95 uppercase tracking-widest"
+              className="inline-flex justify-center items-center px-6 py-3 border-2 border-white/40 backdrop-blur-md text-sm font-black rounded-full text-white hover:bg-white hover:text-[#0F2C59] transition-all hover:-translate-y-1 active:scale-95 uppercase tracking-widest"
             >
               WhatsApp
             </a>

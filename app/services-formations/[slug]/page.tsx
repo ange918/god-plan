@@ -108,7 +108,7 @@ export default function FormationDetailPage({ params }: { params: { slug: string
                 <h3 className="text-xl font-black text-[#0F2C59] mb-4 uppercase">Inscrivez-vous</h3>
                 <a 
                   href="/inscriptions" 
-                  className="inline-block bg-[#0F2C59] text-white px-8 py-3 rounded-full font-black text-sm hover:bg-white hover:text-[#0F2C59] transition-all shadow-lg active:scale-95 uppercase tracking-widest"
+                  className="inline-flex border-2 border-[#0F2C59] text-[#0F2C59] px-6 py-2.5 rounded-full font-black text-xs hover:bg-[#0F2C59] hover:text-white transition-all active:scale-95 uppercase tracking-widest"
                 >
                   Réserver ma place
                 </a>
