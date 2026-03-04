@@ -93,6 +93,40 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="py-24 bg-white text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+          <h2 className="text-4xl font-black text-[#0F2C59] mb-4 font-poppins uppercase tracking-tight">Notre Équipe</h2>
+          <div className="w-24 h-2 bg-[#F4B400] mx-auto rounded-full"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+          {[
+            { 
+              name: "Monsieur Nicodème ATTAKOUN", 
+              role: "Directeur Général du Centre de formation professionnelle God's Plan",
+              img: "/team-director.jpg"
+            },
+            { 
+              name: "Mlle Hilary GANHOUNOUTO", 
+              role: "Secrétaire assistante de direction",
+              img: "/team-secretary.jpg"
+            },
+            { 
+              name: "Monsieur ZODJIHOUE Genev Emmanuel", 
+              role: "Responsable académique et chargé de communication",
+              img: "/team-academic.jpg"
+            }
+          ].map((member, i) => (
+            <div key={i} className="group">
+              <div className="aspect-[3/4] mb-6 overflow-hidden rounded-2xl bg-gray-100 grayscale hover:grayscale-0 transition-all duration-500 shadow-lg">
+                <img src={member.img} alt={member.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              </div>
+              <h3 className="text-xl font-black text-[#0F2C59] mb-1 font-poppins">{member.name}</h3>
+              <p className="text-gray-500 font-bold text-sm uppercase tracking-wider">{member.role}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Valeurs */}
       <section className="py-24 bg-white text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
