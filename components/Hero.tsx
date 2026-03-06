@@ -19,8 +19,8 @@ export default function Hero() {
              Admissions 2026 Ouvertes
           </div>
           <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-white leading-[1.1] mb-8 font-poppins tracking-tight">
-            <span className="block mb-2">Centre Privé de Formation</span>
-            <span className="block text-[#F4B400]">Professionnelle GOD'S PLAN</span>
+            <span className="block mb-2 text-[#F4B400]">Centre Privé de Formation</span>
+            <span className="block">Professionnelle GOD'S PLAN</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl font-medium leading-relaxed italic border-l-4 border-[#F4B400] pl-6 bg-[#0F2C59]/20 backdrop-blur-sm p-4 rounded-r-2xl">
             "Nous construisons votre avenir maintenant !" Le pôle d'excellence pour maîtriser les métiers d'avenir au Bénin.
