@@ -17,10 +17,10 @@ export default function Header() {
   return (
     <header className="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative w-12 h-12 overflow-hidden group-hover:scale-105 transition-transform flex items-center justify-center">
+              <div className="relative w-10 h-10 overflow-hidden group-hover:scale-105 transition-transform flex items-center justify-center">
                 <img
                   src="/logo.jpg"
                   alt="Logo CFPA GOD'S PLAN"

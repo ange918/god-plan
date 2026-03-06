@@ -2,7 +2,7 @@ import { CONTACT_INFO } from '@/constants';
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[90vh] flex items-center">
+    <section className="relative pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden min-h-[70vh] flex items-center">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 scale-105"
@@ -15,16 +15,16 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="lg:w-3/4">
-          <div className="inline-block px-6 py-2 mb-8 bg-[#F4B400] text-[#0F2C59] font-black rounded-full text-sm uppercase tracking-[0.2em] shadow-xl animate-bounce">
+          <div className="inline-block px-5 py-1.5 mb-6 bg-[#F4B400] text-[#0F2C59] font-black rounded-full text-xs uppercase tracking-[0.2em] shadow-xl animate-bounce">
              Admissions 2026 Ouvertes
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-9xl font-black leading-[1.0] mb-8 font-poppins tracking-tighter">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] mb-6 font-poppins tracking-tighter">
             <span className="block text-[#F4B400]">Centre Privé de</span>
             <span className="block text-[#F4B400] mb-4">Formation</span>
             <span className="block text-white">Professionnelle</span>
             <span className="block text-white">GOD'S PLAN</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl font-medium leading-relaxed italic border-l-4 border-[#F4B400] pl-6 bg-[#0F2C59]/20 backdrop-blur-sm p-4 rounded-r-2xl">
+          <p className="text-base md:text-lg text-gray-200 mb-8 max-w-2xl font-medium leading-relaxed italic border-l-4 border-[#F4B400] pl-6 bg-[#0F2C59]/20 backdrop-blur-sm p-4 rounded-r-2xl">
             "Nous construisons votre avenir maintenant !" Le pôle d'excellence pour maîtriser les métiers d'avenir au Bénin.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
