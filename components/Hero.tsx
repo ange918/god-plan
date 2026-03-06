@@ -1,22 +1,22 @@
-import { CONTACT_INFO } from '@/constants';
+import { CONTACT_INFO } from "@/constants";
 
 export default function Hero() {
   return (
     <section className="relative pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden min-h-[70vh] flex items-center">
       {/* Background Image with Overlay */}
-      <div 
+      <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 scale-105"
-        style={{ 
+        style={{
           backgroundImage: "url('/hero-bg.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-[#0F2C59]/90 via-[#0F2C59]/70 to-[#0F2C59]/90 md:bg-gradient-to-r md:from-[#0F2C59]/95 md:via-[#0F2C59]/80 md:to-transparent"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="lg:w-3/4">
+      <div className="container mx-auto px-2 sm:px-4 lg:px-8 relative z-10">
+        <div className="lg:max-w-4xl lg:mx-auto lg:w-3/4">
           <div className="inline-block px-5 py-1.5 mb-6 bg-[#F4B400] text-[#0F2C59] font-black rounded-full text-xs uppercase tracking-[0.2em] shadow-xl animate-bounce">
-             Admissions 2026 Ouvertes
+            Admissions 2026 Ouvertes
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] mb-6 font-poppins tracking-tighter">
             <span className="block text-[#F4B400]">Centre Privé de</span>
@@ -25,16 +25,17 @@ export default function Hero() {
             <span className="block text-white">GOD'S PLAN</span>
           </h1>
           <p className="text-base md:text-lg text-gray-200 mb-8 max-w-2xl font-medium leading-relaxed italic border-l-4 border-[#F4B400] pl-6 bg-[#0F2C59]/20 backdrop-blur-sm p-4 rounded-r-2xl">
-            "Nous construisons votre avenir maintenant !" Le pôle d'excellence pour maîtriser les métiers d'avenir au Bénin.
+            "Nous construisons votre avenir maintenant !" Le pôle d'excellence
+            pour maîtriser les métiers d'avenir au Bénin.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a 
-              href="/inscriptions" 
+            <a
+              href="/inscriptions"
               className="inline-flex justify-center items-center px-6 py-3 border border-transparent text-sm font-black rounded-full text-[#0F2C59] bg-[#F4B400] hover:bg-white transition-all shadow-lg hover:-translate-y-1 active:scale-95 uppercase tracking-widest"
             >
-              S’inscrire
+              S'inscrire
             </a>
-            <a 
+            <a
               href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -45,7 +46,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      
+
       {/* Decorative element */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
         <div className="w-1 h-12 rounded-full bg-gradient-to-b from-[#F4B400] to-transparent"></div>
