@@ -57,7 +57,6 @@ export default function Home() {
                   Notre approche pédagogique unique, basée à 90% sur la pratique, garantit que chaque apprenant sort de nos ateliers avec une maîtrise opérationnelle immédiate.
                 </p>
               </div>
-              <div className="mt-10 flex gap-4">
             </div>
             <div className="relative">
               <div className="aspect-video bg-gray-200 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white group">
