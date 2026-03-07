@@ -3,6 +3,8 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 
 const images = [
   { src: "/hero-bg.jpg", alt: "Façade du centre CFPA GOD'S PLAN", category: "Établissement" },
@@ -27,6 +29,8 @@ const fadeInUp = {
 };
 
 export default function GaleriePage() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   return (
     <main className="min-h-screen bg-white">
       <Header />
@@ -64,7 +68,8 @@ export default function GaleriePage() {
                 key={index}
                 {...fadeInUp}
                 transition={{ delay: index * 0.1 }}
-                className="relative group overflow-hidden rounded-[2rem] border-4 border-white shadow-lg hover:shadow-2xl transition-all"
+                className="relative group overflow-hidden rounded-[2rem] border-4 border-white shadow-lg hover:shadow-2xl transition-all cursor-pointer"
+                onClick={() => setSelectedImage(image.src)}
               >
                 <img 
                   src={image.src} 
@@ -81,13 +86,34 @@ export default function GaleriePage() {
         </div>
       </section>
 
+      {/* Image Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-4 right-4 bg-white text-black p-2 rounded-full hover:bg-gray-200 transition-colors"
+          >
+            <XMarkIcon className="h-6 w-6" />
+          </button>
+          <img 
+            src={selectedImage} 
+            alt="Image agrandie"
+            className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+
       {/* CTA */}
       <section className="py-20 bg-[#F5F5F5] text-center">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-black text-[#0F2C59] mb-8 uppercase tracking-tight">Voulez-vous nous rejoindre ?</h2>
           <a 
             href="/inscriptions" 
-            className="inline-block bg-[#0F2C59] text-white px-12 py-4 rounded-full font-black text-sm hover:bg-[#F4B400] hover:text-[#0F2C59] transition-all shadow-xl active:scale-95 uppercase tracking-widest"
+            className="inline-block bg-[#0F2C59] text-white px-8 py-3 rounded-full font-black text-xs hover:bg-[#F4B400] hover:text-[#0F2C59] transition-all shadow-xl active:scale-95 uppercase tracking-widest"
           >
             S'inscrire maintenant
           </a>

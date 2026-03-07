@@ -22,7 +22,7 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-2 group">
               <div className="relative w-10 h-10 overflow-hidden group-hover:scale-105 transition-transform flex items-center justify-center">
                 <img
-                  src="/logo.jpg"
+                  src="/logo-new.png"
                   alt="Logo CFPA GOD'S PLAN"
                   className="w-full h-full object-contain"
                 />

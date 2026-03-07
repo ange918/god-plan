@@ -58,13 +58,6 @@ export default function Home() {
                 </p>
               </div>
               <div className="mt-10 flex gap-4">
-                <Link href="/a-propos" className="bg-[#0F2C59] text-white px-6 py-3 rounded-full font-black hover:bg-[#F4B400] hover:text-[#0F2C59] transition-all shadow-lg active:scale-95 uppercase text-xs tracking-widest">
-                  Notre Histoire
-                </Link>
-                <Link href="/galerie" className="border-2 border-[#0F2C59] text-[#0F2C59] px-6 py-3 rounded-full font-black hover:bg-[#0F2C59] hover:text-white transition-all active:scale-95 uppercase text-xs tracking-widest">
-                  Voir la galerie
-                </Link>
-              </div>
             </div>
             <div className="relative">
               <div className="aspect-video bg-gray-200 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white group">
@@ -193,7 +186,7 @@ export default function Home() {
           className="max-w-7xl mx-auto px-4 relative z-10"
         >
           <h2 className="text-3xl lg:text-5xl font-black mb-8 font-poppins uppercase tracking-tight">Prêt à construire votre avenir ?</h2>
-          <Link href="/inscriptions" className="inline-block bg-[#F4B400] text-[#0F2C59] px-16 py-6 rounded-full font-black text-2xl hover:bg-white transition-all shadow-2xl hover:scale-110 active:scale-95 uppercase tracking-widest">
+          <Link href="/inscriptions" className="inline-block bg-[#F4B400] text-[#0F2C59] px-10 py-3 rounded-full font-black text-sm hover:bg-white transition-all shadow-2xl hover:scale-110 active:scale-95 uppercase tracking-widest">
             Je m'inscris maintenant
           </Link>
         </motion.div>
